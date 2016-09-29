@@ -7,17 +7,16 @@
  */
 
 
-if($_SERVER['REQUEST_URI']!="/"){
+if($_SERVER['REQUEST_URI']!='/'){
     $future_action=explode('/', $_SERVER['REQUEST_URI']);
     $str=array_filter($future_action);
-     var_dump($str);
+     //var_dump($str);
 
     $action=$str[1];
     if(isset($str[2])){
         $sub_action=$str[2];
-    }else{
-        $action='main.Page';
+       // echo'$sub_action';
     }
-
-
+}else{
+    $action='main.Page';
 }

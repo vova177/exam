@@ -7,5 +7,5 @@
  */
 
 if($action=="main.Page"){
-    view('main.Page');
+    view('mainPage');
 }
