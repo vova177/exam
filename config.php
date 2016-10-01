@@ -6,4 +6,4 @@
  * Time: 12:30
  */
 
-$inf=parse_ini_file('config.ini');
+$address=parse_ini_file('config.ini');

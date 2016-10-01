@@ -13,13 +13,13 @@ function validate($array){
             }
         }
         if($key=='email'){
-            if(!filter_var($val, FILTER_VALIDATE_EMAIL)){
+            if(!filter_var($val, FILTER_VALIDATE_EMAIL)||strlen($val)==0){
                 echo'email false';
                 return false;
             }
         }
-        if($key=='message'){
-            if(strlen($val)>255){
+        if($key=='message' ){
+            if(strlen($val)>255 || strlen($val)==0){
                 return false;
             }
         }
@@ -55,17 +55,20 @@ function read_file($patch){
     }
 }
 
-
-
 function view($view, $data=[]){
 
-    include"teamPlates/header.php";
-    include"teamPlates/{$view}.php";
+    include "templates/header.php";
+    include "templates/{$view}.php";
 
 }
 
-function send_mail($message, $inf){
+function send_mail($message, $address){
     $message=wordwrap($message, 70, '\n\r');
-     $admin=$inf['admin_mail'];
-    mail($admin," ",$message);
+     $to=$address['admin_mail'];
+    $send_mail=mail($to,"",$message);
+    if($send_mail){
+        echo"Надіслано";
+    }else{
+        echo"Ошибка";
+    }
 }

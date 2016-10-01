@@ -6,6 +6,6 @@
  * Time: 20:28
  */
 
-if($action=="main.Page"){
-    view('mainPage');
+if($action=="main"){
+    view('main');
 }
