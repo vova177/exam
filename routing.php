@@ -7,7 +7,8 @@
  */
 
 
-$available_action=['quest', 'main'];
+$available_action=['quest', 'main', 'get_data', 'post_message',
+    'send_db','admin','user', 'exit','registration', 'work_db', 'catalog','books'];
 
 if($_SERVER['REQUEST_URI']!='/'){
     $future_action=explode('/', $_SERVER['REQUEST_URI']);
@@ -26,4 +27,16 @@ if($_SERVER['REQUEST_URI']!='/'){
 }
 else{
     $action='main';
+}
+if($action=='quest') {
+    if ($_SESSION['customer'] != 1 && $_SESSION['admin']!= 1) {
+        header('location: /exit');
+        exit();
+        }
+    }elseif($action=='admin'){
+        if($_SESSION['admin']!=1){
+            header('location: /exit');
+            exit();
+        }
+
 }

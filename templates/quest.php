@@ -1,28 +1,68 @@
 
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+         var table = jQuery('#table').DataTable({
+            "ajax" : "/get_data"
+        });
+        jQuery('form').submit(function (e) {
+           var data=jQuery(this);
+            alert(data);
+            jQuery.ajax({
+                type:"POST",
+                dataTypes: "json",
+                url:"/quest",
+                data: $form.serialize()
+            }).done(function(data){
+               console.log(data);
+                table.ajax.reload();
+                alert('all done, send');
+                console.log('success');
+            }).fail(function() {
+                alert('fail');
+                console.log('fail');
+            });
+            //отмена действия по умолчанию для кнопки submit
+            e.preventDefault();
+            })
+        });
+</script>
 
-<?php
-echo"<br/>";
-foreach ($data['arr'] as  $value){
-    echo $value['name']."<br/>";
-    echo $value['email']."<br/>";
-    echo $value['message']."<br/>";
-}
-?>
 
-<form action="" method="POSt" xmlns="http://www.w3.org/1999/html">
-    <label>Name:</label>
-<input type="text" name="name"/>
-    <br/><br/>
-    <label>Email:</label>
-    <input type="email" name="email"/>
-    <br/><br/>
-    <label>Message:</label>
-    <textarea name="message"/></textarea>
-    <lebel>Send message admin</lebel>
-    <input type="checkbox" name="check"/>
-    <br/><br/>
-    <input type="submit" value="send"/>
-</form>
+<table id="table" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+    </tr>
+    </thead>
+</table>
+
+<div class="container-fluid">
+    <div class="row" id="content">
+        <div class="coll-md-12">
+            <form action="" method="POSt" xmlns="http://www.w3.org/1999/html" role="form">
+            <table id="send_message">
+                    <tr>
+                        <td><label>Name:</label><input type="text" name="name" id="input"></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Email:</label><input type="email" name="email" id="input"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Message:</label><textarea name="message" id="input"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><lebel>Send message admin</lebel><input type="checkbox" name="check" id="input"></td>
+                    </tr>
+                    <tr>
+                       <td> <input type="submit" value="Push me" id="submit" class="btn btn-default"/></td>
+                    </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

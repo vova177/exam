@@ -15,3 +15,11 @@ if(!$action){
 
 include 'controller/quest_controller.php';
 include 'controller/main_controller.php';
+include 'controller/get_data.php';
+include 'controller/post_message.php';
+include 'controller/exit.php';
+include 'controller/registration.php';
+include 'controller/catalog.php';
+include 'controller/product.php';
+include 'controller/admin.php';
+include 'controller/work_db.php';

@@ -4,11 +4,13 @@ session_start();
 
 
 define("FILE_VAY",'database/file.txt');
+define("JSON_FILE",'database/getForecast.txt');
+
+include 'conect_db.php';
+
 include'config.php';
 
-//var_dump($inf);
-//$admin=$inf['admin_mail'];
-////var_dump($admin);
+include'check_user.php';
 
 include'function.php';
 
