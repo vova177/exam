@@ -5,13 +5,23 @@
  * Date: 10.10.16
  * Time: 20:10
  */
-if($action=="catalog"){
 
-    view('catalog');
-    $select1=$db->query('SELECT * FROM `categories`');
-    $mas=$select1->fetchAll(PDO::FETCH_ASSOC);
-    for($i=0;$i<count($mas);$i++){
-        echo "<a href=".$mas[$i]['title'].">".$mas[$i]['title'].'</a><br/>';
-    }
+
+if(isset($id) && $action=="catalog"){
+   // echo $id;
+    $mas_prod=get_products($db, 'products');
+       $need_prod=need_products($mas_prod, $id);
+   // var_dump($need_prod);
+    view('product', $need_prod);
+
+}else if($action=="catalog"){
+
+    $mas=get_categories('categories',$db);
+
+    view('catalog', $mas);
+
+
+
+
 
 }

@@ -19,7 +19,7 @@ if($action=="send_db") {
         $categories = ['sport', 'telephone', 'books', 'music', 'car'];
 
         /* Products */
-        $productTitles = ['', 'BMW', 'Alphabet book', 'Austian Opera CD', 'iphone'];
+        $productTitles = ['bike', 'BMW', 'Alphabet book', 'Austian Opera CD', 'iphone'];
         $productDescriptions  = ['test test test test', 'axst axst axst axst', 'stsd testsd stxc estgfs', 'dqq1st sdazst czxast 123st', 'czxest fdest test teasd', ];
 
         /* Orders */

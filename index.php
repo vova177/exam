@@ -2,11 +2,19 @@
 
 session_start();
 
+include 'conect_db.php';
+
+
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 
 define("FILE_VAY",'database/file.txt');
 define("JSON_FILE",'database/getForecast.txt');
 
-include 'conect_db.php';
+
+
+include 'repository.php';
 
 include'config.php';
 
