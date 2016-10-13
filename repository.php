@@ -6,6 +6,6 @@
  * Time: 19:22
  */
 
-include 'repository/catalog.php';
+include 'repository/category.php';
 include 'repository/products.php';
 include 'repository/users.php';

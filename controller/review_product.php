@@ -8,8 +8,7 @@
 
 if(isset($id) && $action=="products"){
 
-    $arr_prod=category_products($db, 'products');
-    $mass=review_product($id, $arr_prod);
+   $mass=get_products_by_id($db, $id);
     view('review_product', $mass);
 
 }

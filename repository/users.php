@@ -8,5 +8,5 @@
 
 function get_users($db){
     $select = $db->query('SELECT * FROM `users`');
-    return $arr = $select->fetchAll(PDO::FETCH_ASSOC);
+    return $arr = $select->fetchAll();
 }
