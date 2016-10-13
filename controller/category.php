@@ -8,10 +8,8 @@
 
 
 if(isset($id) && $action=="catalog"){
-   // echo $id;
-    $cat_prod=category_products($db);
+
        $need_prod=get_products_by_category_id($db, $id);
-    //var_dump($need_prod);
     view('products', $need_prod);
 
 }else if($action=="catalog"){

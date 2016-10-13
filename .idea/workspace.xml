@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="918d466a-d03f-4d7b-8b1a-aa991bd6e5e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/repository/category.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/catalog.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controller/catalog.php" afterPath="$PROJECT_DIR$/controller/category.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/catalog.php" afterPath="$PROJECT_DIR$/templates/category.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/product.php" afterPath="$PROJECT_DIR$/templates/products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/review_product.php" afterPath="$PROJECT_DIR$/controller/review_product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers.php" afterPath="$PROJECT_DIR$/controllers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository.php" afterPath="$PROJECT_DIR$/repository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/products.php" afterPath="$PROJECT_DIR$/repository/products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/users.php" afterPath="$PROJECT_DIR$/repository/users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/category.php" afterPath="$PROJECT_DIR$/controller/category.php" />
     </list>
     <ignored path="site.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review_product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="review_product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/review_product.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -150,13 +140,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="category.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding>
-                <marker date="1476378806107" expanded="true" signature="388:390" ph="..." />
+                <marker date="1476379197731" expanded="true" signature="307:309" ph="..." />
               </folding>
             </state>
           </provider>
@@ -495,12 +485,12 @@
       <workItem from="1476255857333" duration="2279000" />
       <workItem from="1476274954382" duration="19498000" />
       <workItem from="1476365366342" duration="2741000" />
-      <workItem from="1476373901629" duration="4777000" />
+      <workItem from="1476373901629" duration="5088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222429000" />
+    <option name="totallyTimeSpent" value="222740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="46" y="21" width="1320" height="747" extended-state="6" />
@@ -882,6 +872,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/review_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repository/category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -909,20 +909,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="90">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding>
-            <marker date="1476378806107" expanded="true" signature="388:390" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/review_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
+            <marker date="1476379197731" expanded="true" signature="307:309" ph="..." />
           </folding>
         </state>
       </provider>
