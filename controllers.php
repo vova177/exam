@@ -24,13 +24,14 @@ include 'controller/main_controller.php';
 include 'controller/admin.php';
 
 include 'controller/quest_controller.php';
-include 'controller/get_data.php';
-include 'controller/post_message.php';
+include 'controller/get_mess.php';
+include 'controller/post_mess.php';
 
 
-include 'controller/exit.php';
+include 'controller/login.php';
 include 'controller/registration.php';
 
 
 include 'controller/catalog.php';
+include 'controller/review_product.php';
 

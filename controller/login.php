@@ -5,7 +5,7 @@
  * Date: 07.10.16
  * Time: 15:21
  */
-if($action=="exit"){
+if($action=="login"){
 
     $post_name=isset($_POST['name'])? $_POST['name']:null;
     $post_password=isset($_POST['password'])? $_POST['password'] : null;

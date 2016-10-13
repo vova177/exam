@@ -7,25 +7,19 @@
  */
 
 
-$available_action=['quest', 'main', 'get_data', 'post_message',
-    'send_db','admin','user', 'exit','registration', 'work_db', 'catalog','books'];
+$available_action=['quest', 'main', 'get_mess', 'post_mess',
+    'admin', 'login','registration', 'work_db', 'catalog', 'products'];
 
 if($_SERVER['REQUEST_URI']!='/'){
     $url = parse_url( $_SERVER['REQUEST_URI']);
     $future_action=explode('/', $url['path']);
     $str=array_filter($future_action);
     $action=$str[1];
-    if(isset($str[2])){
-        if(is_numeric($str[2])){
+    if(isset($str[2]) && is_numeric($str[2])){
             $id=$str[2];
         }else{
             $action2=null;
-
         }
-       // var_dump($action2);
-        //($id);
-        // var_dump($sub_action);
-    }
     if(!in_array($action,$available_action)){
         $action=null;
         $sub_action=null;

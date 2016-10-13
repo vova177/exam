@@ -1,21 +1,21 @@
 
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-         var table = jQuery('#table').DataTable({
-            "ajax" : "/get_data"
-        });
-        jQuery('form').submit(function (e) {
-           var data=jQuery(this);
-            alert(data);
-            jQuery.ajax({
-                type:"POST",
-                dataTypes: "json",
-                url:"/quest",
+<script>
+    $(document).ready(function() {
+        var table = $('#table').DataTable( {
+            "ajax": "/get_mess"
+        } );
+        $('form').submit(function(e) {
+            var $form = $(this);
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "/post_mess",
                 data: $form.serialize()
-            }).done(function(data){
-               console.log(data);
+                //
+            }).done(function(data) {
+                console.log(data);
                 table.ajax.reload();
-                alert('all done, send');
+                alert('all done, sent');
                 console.log('success');
             }).fail(function() {
                 alert('fail');
@@ -23,8 +23,8 @@
             });
             //отмена действия по умолчанию для кнопки submit
             e.preventDefault();
-            })
         });
+    });
 </script>
 
 
@@ -41,7 +41,7 @@
 <div class="container-fluid">
     <div class="row" id="content">
         <div class="coll-md-12">
-            <form action="" method="POSt" xmlns="http://www.w3.org/1999/html" role="form">
+            <form action="/quest" method="POST"  role="form">
             <table id="send_message">
                     <tr>
                         <td><label>Name:</label><input type="text" name="name" id="input"></td>

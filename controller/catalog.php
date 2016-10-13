@@ -9,9 +9,8 @@
 
 if(isset($id) && $action=="catalog"){
    // echo $id;
-    $mas_prod=get_products($db, 'products');
-       $need_prod=need_products($mas_prod, $id);
-   // var_dump($need_prod);
+    $cat_prod=category_products($db, 'products');
+       $need_prod=need_products($cat_prod, $id);
     view('product', $need_prod);
 
 }else if($action=="catalog"){
@@ -19,9 +18,5 @@ if(isset($id) && $action=="catalog"){
     $mas=get_categories('categories',$db);
 
     view('catalog', $mas);
-
-
-
-
 
 }

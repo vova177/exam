@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="main">Main page</a>
-            <a class="navbar-brand" href="exit">Exit</a>
+            <a class="navbar-brand" href="login">Exit</a>
         </div>
         <div class="collapse navbar-collapse" id="responsive-menu">
             <ul class="nav navbar-nav">

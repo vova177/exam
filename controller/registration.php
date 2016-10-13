@@ -12,15 +12,15 @@ if($action=="registration") {
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $password = isset($_POST['password']) ? $_POST['password'] : null;
     $last_activity = date('Y-m-d H:i:s');
-//    try{
-//        $db = new PDO('mysql:host=localhost; dbname=QEST', 'root', 'euflfq');
-//        $insert = $db->prepare("INSERT INTO users(`name`, `role`, `email`, `password`, `login`, `last_activity`)
-//                                              VALUES(:name, :role, :email, :password, :login, :last_activity)");
-//        $insert->execute(array('name' => 'vova', 'role' => 'admin', 'email' => '1kaapa@.ukr.net',
-//            'password' => sha1('123'.$address['key']), 'login' => sha1('admin'.$address['key']), 'last_activity' => $last_activity));
-//    }catch (PDOException $e){
-//        echo $e->getMessage();
-//    }
+    try{
+        $db = new PDO('mysql:host=localhost; dbname=QEST', 'root', 'euflfq');
+        $insert = $db->prepare("INSERT INTO users(`name`, `role`, `email`, `password`, `login`, `last_activity`)
+                                              VALUES(:name, :role, :email, :password, :login, :last_activity)");
+        $insert->execute(array('name' => 'vova', 'role' => 'admin', 'email' => '1kaapa@.ukr.net',
+            'password' => sha1('123'.$address['key']), 'login' => sha1('admin'.$address['key']), 'last_activity' => $last_activity));
+    }catch (PDOException $e){
+        echo $e->getMessage();
+    }
 
     if ($name && $login && $email && $password) {
         $role = 'customer';

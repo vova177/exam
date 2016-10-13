@@ -79,11 +79,20 @@ function read_file($patch){
     if(file_exists($patch)){
         $str=file_get_contents($patch);
         $array=unserialize($str);
-
-        return $array ? $array :[];
-    }else{
-        return [];
+      if(isset($array)) {
+          return $array;
+      }else{return [];}
     }
+}
+
+function text_change($array){
+
+    foreach($array as $key => $value){
+        if($key=='message'){
+            $value=nl2br($value);
+        }
+    }
+      return $array;
 }
 
 function view($view, $data=[]){

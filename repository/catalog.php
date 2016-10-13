@@ -15,3 +15,8 @@ function get_categories($table_name, $db)
     return $mas;
 
 }
+function category_products($db, $table_name){
+    $select2 = $db->query("SELECT * FROM $table_name");
+    $mass_product = $select2->fetchAll(PDO::FETCH_ASSOC);
+    return $mass_product;
+}

@@ -5,7 +5,7 @@
  * Date: 06.10.16
  * Time: 20:23
  */
-if($action=="send_db") {
+if($action=="work_db") {
 
     $insertedIds = [];
     function randVal( $valName ) {

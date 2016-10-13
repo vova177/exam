@@ -8,9 +8,10 @@
 
 //for ($i = 0; $i < count($data); $i++) {
 
+//var_dump($data);
 
     foreach($data as $value){
-
     $url="/catalog/".$value['id'];
     echo "<a href='".$url."'>" . $value['title'] . "</a><br/>";
+
 }
