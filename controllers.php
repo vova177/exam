@@ -33,5 +33,5 @@ include 'controller/registration.php';
 
 
 include 'controller/category.php';
-include 'controller/review_product.php';
+include 'controller/products.php';
 
