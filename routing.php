@@ -28,14 +28,14 @@ if($_SERVER['REQUEST_URI']!='/'){
 else{
     $action='main';
 }
-if($action=='quest') {
+if($action=='/quest') {
     if ($_SESSION['customer'] != 1 && $_SESSION['admin']!= 1) {
-        header('location: /exit');
+        header('location: /login');
         exit();
         }
     }elseif($action=='admin'){
         if($_SESSION['admin']!=1){
-            header('location: /exit');
+            header('location: /login');
             exit();
         }
 

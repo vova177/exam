@@ -32,6 +32,6 @@ include 'controller/login.php';
 include 'controller/registration.php';
 
 
-include 'controller/category.php';
-include 'controller/products.php';
+include 'controller/category_products.php';
+include 'controller/product.php';
 

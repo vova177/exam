@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'conect_db.php';
+include 'connect_db.php';
 
 
 ini_set('display_errors',1);
@@ -10,8 +10,6 @@ error_reporting(E_ALL);
 
 
 define("JSON_FILE",'database/file.txt');
-//define("JSON_FILE",'database/getForecast.txt');
-
 
 
 include 'repository.php';

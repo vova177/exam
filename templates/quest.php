@@ -42,7 +42,7 @@
     <div class="row" id="content">
         <div class="coll-md-12">
             <form action="/quest" method="POST"  role="form">
-            <table id="send_message">
+            <table id="send_message" align="center">
                     <tr>
                         <td><label>Name:</label><input type="text" name="name" id="input"></td>
                     </tr>
