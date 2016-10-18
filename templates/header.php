@@ -33,6 +33,7 @@
                 <li><a href="/registration">Registration</a></li>
                 <li><a href="/admin">Admin</a></li>
                 <li><a href="/catalog">Catalog</a></li>
+                <li><a href="/basket">Basket</a></li>
             </ul>
         </div>
     </div>

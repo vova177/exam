@@ -21,7 +21,7 @@ if($action=="quest"){
             }
         }
     $messages = read_file(JSON_FILE);
-    var_dump(json_encode( [ 'data'=>$messages]));
+   // echo json_encode( [ 'data'=>$messages]);
 
     view('quest');
 }

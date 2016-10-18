@@ -8,7 +8,7 @@
             var $form = $(this);
             $.ajax({
                 type: "POST",
-                dataType: "json",
+                dataType: "JSON",
                 url: "/post_mess",
                 data: $form.serialize()
                 //

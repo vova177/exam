@@ -14,14 +14,12 @@ if($action=="login"){
         $check_password=md5($password);
         $check_login=md5($login);
         $check_email=$login;
-        //var_dump(check_users($db, $check_password,$check_login,$check_email));
-        if(check_users($db, $check_password,$check_login,$check_email)){
-            $cookie=$check_password.$check_email.$check_login;
-            setcookie('user', $cookie, time() +2*3600);
-            //$action="quest";
-            exit();
+        $valid_user=login_users($db, $check_password,$check_login,$check_email);
+        if(!empty($valid_user)){
+            $cookie=$valid_user['id'];
+            setcookie('user_id', md5($cookie), time() +2*3600);
+
         }
     }
-
     view('login');
 }

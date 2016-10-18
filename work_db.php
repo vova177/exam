@@ -5,7 +5,6 @@
  * Date: 06.10.16
  * Time: 20:23
  */
-if($action=="work_db") {
 
     $insertedIds = [];
     function randVal( $valName ) {
@@ -107,4 +106,4 @@ if($action=="work_db") {
     fakeDataInsert( $db, $insertedIds, 'reviews', 200 );
 
 
-}
+
