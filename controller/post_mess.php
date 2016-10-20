@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vova
- * Date: 12.10.16
- * Time: 19:59
- */
-
 if( $action == "post_mess" ) {
 
     $name = isset($_POST['name']) ? $_POST['name'] : null;

@@ -21,5 +21,6 @@ include 'controller/registration.php';
 include 'controller/category_products.php';
 include 'controller/product.php';
 include 'controller/basket.php';
+include 'controller/order.php';
 
 include 'controller/add_product_to_cart.php';

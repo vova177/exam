@@ -9,7 +9,6 @@
             method: "POST",
             dataType: "JSON",
             success: function( data ) {
-                //alert(data.amount);
             if( data.amount > 0 ) {
                 $('.cart').html('В корзине '+data.amount+' товаров!');
             }
@@ -19,15 +18,22 @@
     });
 </script>
 
+<div class="cart">
 
+</div>
 
+<form action="" method="post">
+    <table class="table table-bordered table-hover">
 <?php
 foreach($data as $value){
+    echo "<tr>";
     $id=$value['id'];
-   echo "Name:".$value['title']."<br/>";
-    echo "Description:".$value['description']."<br/>";
-    echo "Price:".$value['price']."<br/>";
-
+   echo "<td>"."Name:".$value['title']."<td/>";
+    echo "<td>"."Description:".$value['description']."<td/>";
+    echo "<td>"."Price:".$value['price']."<td/>";
+   echo  "<td>"."<button class='btn' data-id=".$id.">Bought</button>"."<td/>";
+    echo "<tr/>";
 }
 ?>
-<button class="btn" data-id=."3".>Bought</button>
+    </table>
+</form>

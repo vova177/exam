@@ -9,7 +9,7 @@
 
 $available_action=['quest', 'main', 'get_mess', 'post_mess',
     'admin', 'login','registration', 'catalog',
-    'basket','products', 'add_product_to_cart'];
+    'basket','products', 'add_product_to_cart', 'order'];
 
 if($_SERVER['REQUEST_URI']!='/'){
     $url = parse_url( $_SERVER['REQUEST_URI']);
@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_URI']!='/'){
 else{
     $action='main';
 }
-if($action=='/quest') {
+if($action=='quest') {
     if ($_SESSION['user'] != 1 && $_SESSION['admin']!= 1) {
         header('location: /login');
         exit();

@@ -1,14 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vova
- * Date: 27.09.16
- * Time: 20:27
- */
 
 if($action=="quest"){
-
-
     $name=isset($_POST['name']) ? $_POST['name'] : null;
     $email=isset($_POST['email']) ? $_POST['email'] : null;
     $message=isset($_POST['message']) ? $_POST['message'] : null;
@@ -22,6 +14,5 @@ if($action=="quest"){
         }
     $messages = read_file(JSON_FILE);
    // echo json_encode( [ 'data'=>$messages]);
-
     view('quest');
 }

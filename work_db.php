@@ -100,10 +100,10 @@
         }
     }
     fakeDataInsert( $db, $insertedIds, 'categories', 10 );
-    fakeDataInsert( $db, $insertedIds, 'products', 500 );
-    fakeDataInsert( $db, $insertedIds, 'users', 100 );
-    fakeDataInsert( $db, $insertedIds, 'orders', 300 );
-    fakeDataInsert( $db, $insertedIds, 'reviews', 200 );
+    fakeDataInsert( $db, $insertedIds, 'products', 100 );
+    fakeDataInsert( $db, $insertedIds, 'users', 10 );
+    fakeDataInsert( $db, $insertedIds, 'orders', 10 );
+    fakeDataInsert( $db, $insertedIds, 'reviews', 20 );
 
 
 
