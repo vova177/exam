@@ -6,6 +6,7 @@
     </tr>
 <?php
 $price=0;
+echo "Кількість товарів: ".count($_SESSION['cart']);
 foreach($data as $key=>$value){
     echo"<tr>";
     echo "<td>".$value[0]['title']."</td>";

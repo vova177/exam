@@ -1,19 +1,34 @@
 <?php
 if($action=="basket"){
-    if(isset($id)) {
+    if(isset($_GET['delete']) && isset($_SESSION['cart'])) {
         foreach ($_SESSION['cart'] as $key=> $product_id) {
-            if ($product_id == $id) {
+            if ($product_id == $_GET['delete'] && $_SESSION['count'][$product_id]>0) {
+                $_SESSION['count'][$product_id]--;
                 unset($_SESSION['cart'][$key]);
+                if($_SESSION['count'][$product_id]==0){
+                    unset($_SESSION['count'][$product_id]);
+                }
                 break;
             }
         }
     }
-       if($_SESSION['cart']!=[]) {
-           foreach ($_SESSION['cart'] as $product_id) {
-               $product_by_id[] = get_products_by_id($db, $product_id);
-           }
-       }else{
-           $product_by_id=[];
-       }
+    $post_count=isset($_POST['count'])? $_POST['count'] : null;
+    var_dump($post_count);
+    if(isset($_GET['add'])){
+        foreach ($_SESSION['cart'] as $key=> $product_id) {
+            if($product_id == $_GET['add']){
+                $_SESSION['count'][$product_id]++;
+                $_SESSION['cart'][] = $product_id;
+            }
+            break;
+        }
+    }
+    var_dump($_SESSION['cart']);
+    var_dump($_SESSION['count']);
+        if(empty($_SESSION['cart'])) {
+            $product_by_id=[];
+        }else{
+            $product_by_id = get_products($db, $_SESSION['cart']);
+        }
     view('basket', $product_by_id);
 }

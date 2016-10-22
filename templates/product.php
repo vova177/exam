@@ -1,7 +1,8 @@
 
 <script>
     $(document).ready(function(){
-    $('.btn').click(function(){
+    $('.btn').click(function(event){
+        event.preventDefault();
         var product_id=$(this).attr('data-id');
         $.ajax({
             url: '/add_product_to_cart',
