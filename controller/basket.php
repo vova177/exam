@@ -12,7 +12,7 @@ if($action=="basket"){
             }
         }
     }
-    $post_count=isset($_POST['count'])? $_POST['count'] : null;
+    $post_count=isset($_POST['id'])? $_POST['id'] : null;
     var_dump($post_count);
     if(isset($_GET['add'])){
         foreach ($_SESSION['cart'] as $key=> $product_id) {
@@ -30,5 +30,6 @@ if($action=="basket"){
         }else{
             $product_by_id = get_products($db, $_SESSION['cart']);
         }
+        echo json_encode(['count'=>$post_count]);
     view('basket', $product_by_id);
 }

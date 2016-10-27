@@ -24,3 +24,12 @@ function check_users($db, $cookie){
         return false;
     }
 }
+function out_users($db){
+    $select=$db->query("SELECT * FROM `users`");
+    $users=$select->fetchAll();
+    return $users;
+}
+function delete_user_byID($db, $id){
+    $select=$db->query("DELETE FROM `users` WHERE '{$id}'=`id`");
+    return $select;
+}

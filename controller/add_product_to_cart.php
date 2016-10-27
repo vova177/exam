@@ -1,6 +1,6 @@
 <?php
 if($action=="add_product_to_cart"){
-     $product_id=$_POST['id'];
+     $product_id=isset($_POST['id'])? $_POST['id'] : null;
     $_SESSION['count'][$product_id]=1;
     if(empty($_SESSION['cart'])) {
         $_SESSION['cart'][] = $product_id;
@@ -12,6 +12,13 @@ if($action=="add_product_to_cart"){
         }
         $_SESSION['cart'][] = $product_id;
     }
-    echo json_encode( ['amount'=> count($_SESSION['cart'])] );
+//    if($product_id) {
+//        if (isset($_SESSION['cart'][$productId])) {
+//            $_SESSION['cart'][$productId]++;
+//        } else {
+//            $_SESSION['cart'][$productId] = 1;
+//        }
+//    }
+    echo json_encode( $_SESSION['cart']);
     var_dump($_SESSION);
 }

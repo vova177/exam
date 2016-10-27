@@ -8,11 +8,12 @@
 
 
 $available_action=['quest', 'main', 'get_mess', 'post_mess',
-    'admin', 'login','registration', 'catalog',
+    'login','registration', 'catalog',
     'basket','products', 'add_product_to_cart', 'order'];
 
 if($_SERVER['REQUEST_URI']!='/'){
     $url = parse_url( $_SERVER['REQUEST_URI']);
+   // var_dump($url);
     $future_action=explode('/', $url['path']);
     $str=array_filter($future_action);
     $action=$str[1];

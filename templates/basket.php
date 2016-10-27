@@ -1,3 +1,23 @@
+<script>
+    $(document).ready(function(){
+        $('.count').keydown(function(event){
+            event.preventDefault();
+            var count=$(this).attr('value');
+            $.ajax({
+                action: '/basket',
+                method: 'POST',
+                dataType: 'JSON',
+                data: {id: count},
+                success: function( data ) {
+                    if(data.count>0){
+                        $('.count').html(data.count);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
 <form action="/order" method="post">
 <table class="table  table-bordered table-hover table-striped table-condensed">
     <tr>

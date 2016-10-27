@@ -1,0 +1,27 @@
+@media (max-width:767px) {
+    a{
+        font-size:10px;
+    }
+}
+
+#head{
+    height: 100px;
+    background: #3c763d;
+}
+#button{
+    position: absolute;
+    right: 100px;
+    margin: 50px;
+}
+#content{
+    background: #9acfea;
+}
+td{
+    text-align: center;
+}
+
+#input{
+    border-radius: 20%;
+}
+
+

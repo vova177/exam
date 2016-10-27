@@ -16,4 +16,9 @@ function get_products($db, $id){
     $mass=$select->fetchAll();
     return $mass;
 }
+function out_products($db){
+    $select=$db->query("SELECT * FROM `products`");
+    $products=$select->fetchAll();
+    return $products;
+}
 

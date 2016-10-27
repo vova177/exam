@@ -25,14 +25,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/main">Main page</a>
-            <a class="navbar-brand" href="/login">Login</a>
         </div>
         <div class="collapse navbar-collapse" id="responsive-menu">
             <ul class="nav navbar-nav">
-                <li><a href="/quest">Quest</a></li>
-                <li><a href="/registration">Registration</a></li>
-                <li><a href="/catalog">Catalog</a></li>
-                <li><a href="/basket">Basket</a></li>
+                <li><a href="/admin/categories">Products</a></li>
+                <li><a href="/admin/users">Users</a></li>
             </ul>
         </div>
     </div>
