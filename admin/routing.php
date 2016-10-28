@@ -1,14 +1,13 @@
 <?php
-$available_action=['users', 'categories', 'update', 'delete', 'create',
-    'select_category', 'select_products'];
+$available_action=['users', 'update_user', 'categories','update_category', 'products', 'update_product' ];
 
 if($_SERVER['REQUEST_URI']!='/admin/'){
     $url = parse_url( $_SERVER['REQUEST_URI']);
     $future_action=explode('/', $url['path']);
     $str=array_filter($future_action);
     $action=$str[2];
-    if(isset($str[3])){
-            $action2=$str[3];
+    if(isset($str[3]) && is_numeric($str[3])){
+            $id=$str[3];
         }
     if(!in_array($action,$available_action)){
         $action=null;

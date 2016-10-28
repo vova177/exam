@@ -28,7 +28,7 @@
         </div>
         <div class="collapse navbar-collapse" id="responsive-menu">
             <ul class="nav navbar-nav">
-                <li><a href="/admin/categories">Products</a></li>
+                <li><a href="/admin/categories">Category</a></li>
                 <li><a href="/admin/users">Users</a></li>
             </ul>
         </div>

@@ -7,8 +7,6 @@ if(!$action){
 
 include 'controller/main_controller.php';
 
-include 'controller/admin.php';
-
 include 'controller/quest_controller.php';
 include 'controller/get_mess.php';
 include 'controller/post_mess.php';

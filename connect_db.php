@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vova
- * Date: 11.10.16
- * Time: 1:14
- */
 define("HOST", "localhost");
 define("USER", "root");
 define("PASS", "euflfq");

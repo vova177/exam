@@ -1,12 +1,12 @@
 <?php
-function add_user($db, $login, $password, $name, $email, $role, $last_activity){
-    $select = $db->query("SELECT * FROM `users` WHERE `login`='{$login}'  OR `email`='{$email}'");
+function add_user($db, $data){
+    $select = $db->query("SELECT * FROM `users` WHERE `login`='{$data['login']}'  OR `email`='{$data['email']}'");
     $repeat_users = $select->fetchAll();
     if(empty($repeat_users)) {
         $insert = $db->prepare("INSERT INTO users(`name`, `role`, `email`, `password`, `login`, `last_activity`)
-                                                   VALUES(:name, :role, :email, :password, :login, :last_activity)");
-        $insert->execute(array('name' => $name, 'role' => $role, 'email' => $email,
-            'password' => md5($password), 'login' => $login, 'last_activity' => $last_activity));
+           VALUES(:name, :role, :email, :password, :login, :last_activity)");
+        $insert->execute(array('name' => $data['name'], 'role' => $data['role'], 'email' => $data['email'],
+            'password' => md5($data['password']), 'login' => $data['login'], 'last_activity' => $data['last_activity']));
     }
 }
 function login_users($db, $password, $login, $email){
@@ -31,5 +31,15 @@ function out_users($db){
 }
 function delete_user_byID($db, $id){
     $select=$db->query("DELETE FROM `users` WHERE '{$id}'=`id`");
+    return $select;
+}
+function out_user_byID($db, $id){
+    $select=$db->query("SELECT * FROM `users` WHERE '{$id}'=`id`");
+    $user=$select->fetchAll();
+    return  $user;
+}
+function update_user_byID($db, $id, $data){
+    $select=$db->query("UPDATE `users` SET `name`='{$data['name']}', 
+          `role`='{$data['role']}', `email`='{$data['email']}' WHERE `id`='{$id}'");
     return $select;
 }
