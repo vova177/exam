@@ -3,10 +3,11 @@ function add_user($db, $data){
     $select = $db->query("SELECT * FROM `users` WHERE `login`='{$data['login']}'  OR `email`='{$data['email']}'");
     $repeat_users = $select->fetchAll();
     if(empty($repeat_users)) {
-        $insert = $db->prepare("INSERT INTO users(`name`, `role`, `email`, `password`, `login`, `last_activity`)
-           VALUES(:name, :role, :email, :password, :login, :last_activity)");
+        $insert = $db->prepare("INSERT INTO users(`name`, `role`, `email`, `password`, `login`, `last_activity`, `geonameID`, `age`)
+           VALUES(:name, :role, :email, :password, :login, :last_activity, :geonameID, :age)");
         $insert->execute(array('name' => $data['name'], 'role' => $data['role'], 'email' => $data['email'],
-            'password' => md5($data['password']), 'login' => $data['login'], 'last_activity' => $data['last_activity']));
+            'password' => md5($data['password']), 'login' => $data['login'], 'last_activity' => $data['last_activity'],
+              'geonameID'=>0, 'age'=>2));
     }
 }
 function login_users($db, $password, $login, $email){
@@ -25,7 +26,7 @@ function check_users($db, $cookie){
     }
 }
 function out_users($db){
-    $select=$db->query("SELECT * FROM `users`");
+    $select=$db->query("SELECT * FROM `users` LIMIT 100");
     $users=$select->fetchAll();
     return $users;
 }

@@ -1,26 +1,34 @@
-<table class="table">
-    <tr><td colspan="5">Create user</td></tr>
-    <tr>
-        <td>Role</td>
-        <td>Name</td>
-        <td>Login</td>
-        <td>Email</td>
-        <td>Password</td>
-    </tr>
+<div class="container">
+    <h3>Create user</h3>
     <form action="" method="post">
-        <tr>
-            <td><input type="text" name="role"/></td>
-            <td><input type="text" name="name"/></td>
-            <td><input type="text" name="login"/></td>
-            <td><input type="text" name="email"/></td>
-            <td><input type="text" name="password"/></td>
-        </tr>
-        <tr><td colspan="5"><input type="submit"  value="Ok"/></td></tr>
+        <div class="form-group">
+            <label>Role</label>
+         <input type="text" name="form[role]" id="role" class="form-control" placeholder="enter admin or customer"/>
+        </div>
+        <div class="form-group">
+            <label>Name user</label>
+           <input type="text" name="form[name]" id="user_name" class="form-control" placeholder="enter user name"/>
+            <div id="userList"></div>
+        </div>
+        <div class="form-group">
+            <label>Login user</label>
+        <input type="text" name="form[login]" id="login" class="form-control" placeholder="enter user login"/>
+                <div id="loginList"></div>
+        </div>
+        <div class="form-group">
+            <label>Email user</label>
+            <input type="text" name="form[email]" id="email" class="form-control" placeholder="enter user email"/>
+            <div id="emailList"></div>
+        </div>
+        <div class="form-group">
+            <label>Password user</label>
+            <input type="text" name="form[password]" id="password" class="form-control" placeholder="enter user password"/>
+        </div>
+       <button type="submit" class="btn">Ok</button>
     </form>
-</table>
 
 <table class="table">
-    <tr><td colspan="6">All users</td></tr>
+    <tr><td colspan="6"><h3>All users</h3></td></tr>
     <tr>
         <td>Name</td>
         <td>Role</td>
@@ -36,9 +44,10 @@ foreach($data as  $value) {
     echo"<td>".$value['role']."</td>";
     echo"<td>".$value['email']."</td>";
     echo"<td>".$value['last_activity']."</td>";
-    echo "<td><a href=users/?delete_user=".$value['id'].">Delete</a></td>";
-    echo "<td><a href=update_user/?update_user=".$value['id'].">Update</a></td>";
+    echo "<td><a href=users?delete_user=".$value['id'].">Delete</a></td>";
+    echo "<td><a href=update-user?update_user=".$value['id'].">Update</a></td>";
     echo "</tr>";
 }
 ?>
 </table>
+</div>

@@ -1,15 +1,18 @@
-<table class="table">
-    <tr>
-        <td>Title</td>
-        <td>Description</td>
-        <td colspan="2">Price</td>
-    </tr>
-<form action="" method="post">
-    <tr>
-    <td><input type="text" name="title"/></td>
-    <td><input type="text" name="description"/></td>
-    <td><input type="text" name="price"/></td>
-    <td><input type="submit" value="ok"/></td>
-    </tr>
-</form>
-</table>
+<div class="container">
+    <form action="" method="post">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="form[title]" value="<?=$data[0]['title']?>"/>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" name="form[description]" value="<?=$data[0]['description']?>"/>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+        <input type="text" class="form-control" name="form[price]" value="<?=$data[0]['price']?>"/>
+        </div>
+        <button type="submit" class="btn">Ok</button>
+    </form>
+</div>
+]

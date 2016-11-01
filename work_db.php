@@ -6,6 +6,7 @@
  * Time: 20:23
  */
 
+
     $insertedIds = [];
     function randVal( $valName ) {
         /* User Data */
@@ -37,8 +38,8 @@
             return "'".$$valName[rand(0,4)]."'";
         }
     }
+ $GLOBALS=geonameID($db);
     function insertRow( $db, &$insertedIds, $table ) {
-
         if( $table == 'categories' ) {
 
             $values = [
@@ -55,7 +56,6 @@
             ];
         }
         else if( $table == 'users' ) {
-
             $values = [
                 'name' => randVal('names'),
                 'role' => randVal('roles'),
@@ -63,10 +63,11 @@
                 'password' => "'".md5(rand(1000,9999))."'",
                 'login' => randVal('logins'),
                 'last_activity' => "'".rand(2015,2016).'-'.rand(1,12).'-'.rand(1,28).' '.rand(0,23).':'.rand(0,59).':'.rand(0,59)."'",
+                'geonameID'=>$GLOBALS[rand(0,40609)]['geonameid'],
+                'age'=>rand(15,65)
             ];
         }
         else if( $table == 'orders' ) {
-
             $values = [
                 'user_id' => $insertedIds['users'][ rand(0, count($insertedIds['users'])-1) ],
                 'product_id' => $insertedIds['products'][ rand(0, count($insertedIds['products'])-1) ],
@@ -99,11 +100,11 @@
             insertRow( $db, $insertedIds, $table);
         }
     }
-    fakeDataInsert( $db, $insertedIds, 'categories', 10 );
-    fakeDataInsert( $db, $insertedIds, 'products', 100 );
-    fakeDataInsert( $db, $insertedIds, 'users', 10 );
-    fakeDataInsert( $db, $insertedIds, 'orders', 10 );
-    fakeDataInsert( $db, $insertedIds, 'reviews', 20 );
+   // fakeDataInsert( $db, $insertedIds, 'categories', 10 );
+    //fakeDataInsert( $db, $insertedIds, 'products', 100 );
+    fakeDataInsert( $db, $insertedIds, 'users', 40608);
+   // fakeDataInsert( $db, $insertedIds, 'orders', 10 );
+    //fakeDataInsert( $db, $insertedIds, 'reviews', 20 );
 
 
 

@@ -1,11 +1,9 @@
-<table class="table">
-    <tr>
-        <td colspan="2">Update category</td>
-    </tr>
-<form action="" method="post">
-    <tr>
-    <td><input type="text" name="category"/></td>
-    <td><input type="submit" value="ok"/></td>
-    </tr>
-</form>
-</table>
+<div class="container">
+    <h3>Update category</h3>
+    <form action="" method="post">
+    <div class="form-group">
+        <input type="text" class="form-control" name="category" value="<?=$data[0]['title']?>"/>
+    </div>
+    <button type="submit" class="btn">Ok</button>
+    </form>
+</div>

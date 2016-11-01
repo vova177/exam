@@ -1,26 +1,15 @@
-
+<div class="container">
+     <h3>Update selected user</h3>
 <form action="" method="post">
-<table class="table table-bordered">
-    <tr>
-    <td><input type="text" name="new_name" size="30"/></td>
-    <td><input type="text" name="new_role" size="30"/></td>
-    <td ><input type="text" name="new_email" size="30"/><input type="submit" value="OK"></td>
-    </tr>
-    <tr>
-        <td>Name</td>
-        <td>Role</td>
-        <td>Email</td>
-    </tr>
-<?php
-if(!empty($data)){
-    foreach($data as $value){
-        echo"<tr>";
-        echo"<td>".$value['name'] . "</td>";
-        echo"<td>".$value['role']."</td>";
-        echo"<td>".$value['email']."</td>";
-        echo"</td>";
-    }
-}
-?>
-</table>
+    <div class="form-group">
+    <input type="text" class="form-control" name="form[name]" size="30" value="<?=$data[0]['name']?>"/>
+    </div>
+    <div class="form-group">
+    <input type="text" class="form-control" name="form[role]" size="30" value="<?=$data[0]['role']?>"/>
+    </div>
+    <div class="form-group">
+    <input type="text" class="form-control" name="form[email]" size="30" value="<?=$data[0]['email']?>"/>
+    </div>
+        <button type="submit" class="btn">Ok</button>
 </form>
+</div>

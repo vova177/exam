@@ -23,3 +23,8 @@ function delete_category($db, $id){
     $select=$db->query("DELETE FROM `categories` WHERE `id`='{$id}'");
     return $select;
 }
+function get_category_byID($db, $id){
+    $select=$db->query("SELECT * FROM `categories` WHERE `id`='{$id}'");
+    $need_category=$select->fetchAll();
+    return $need_category;
+}

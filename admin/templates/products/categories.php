@@ -1,11 +1,14 @@
-<table class="table">
-    <tr><td colspan="2">Add new categoty</td></tr>
+<div class="container">
+    <h3>Add new categoty</h3>
     <form action="" method="post">
-        <tr><td><input type="text" name="category"/></td></tr>
-        <tr><td><input type="submit" value="add"/></td></tr>
+        <div class="form-group">
+        <input type="text" class="form-control" name="category"/>
+        </div>
+            <button type="submit" class="btn">Ok</button>
     </form>
-</table>
+
 <table class="table">
+    <tr align="center"><td colspan="4"><h3>All category</h3></td></tr>
     <tr>
         <td>Name</td>
         <td>Select</td>
@@ -18,7 +21,8 @@
         echo '<td>' . $value['title'] . '</td>';
         echo '<td><a href=products/'.$value['id'].'>Select</a></td>';
         echo '<td><a href=?delete_category='.$value['id'].'>Delete</a></td>';
-        echo '<td><a href=update_category/?update_category='.$value['id'].'>Update</a></td>';
+        echo '<td><a href=update-category/?update_category='.$value['id'].'>Update</a></td>';
         echo '<tr>';
     }
     ?>
+</div>

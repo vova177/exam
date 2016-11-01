@@ -1,5 +1,6 @@
 <?php
-$available_action=['users', 'update_user', 'categories','update_category', 'products', 'update_product' ];
+$available_action=['users', 'update-user', 'categories','update-category',
+    'products', 'update-product', 'auto-complete' ];
 
 if($_SERVER['REQUEST_URI']!='/admin/'){
     $url = parse_url( $_SERVER['REQUEST_URI']);
@@ -15,6 +16,6 @@ if($_SERVER['REQUEST_URI']!='/admin/'){
     }
 }
 else{
-    $action='main';
+    $action='categories';
 }
 

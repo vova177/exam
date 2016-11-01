@@ -10,3 +10,4 @@ include 'controllers/categories.php';
 include 'controllers/update_category.php';
 include 'controllers/products.php';
 include 'controllers/update_product.php';
+include 'controllers/autocomplete.php';

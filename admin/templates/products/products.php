@@ -1,19 +1,22 @@
-<table class="table">
-    <tr>
-        <td>Title</td>
-        <td>Description</td>
-        <td>Price</td>
-    </tr>
+<div class="container">
     <form action="" method="post">
-        <tr>
-            <td><input type="text" name="title"/></td>
-            <td><input type="text" name="description"/></td>
-            <td><input type="text" name="price"/></td>
-        </tr>
-        <tr><td colspan="3"><input type="submit" value="ok"/></td></tr>
+        <div class="form-group">
+            <label>Title</label>
+          <input type="text" class="form-control" name="form[title]"/>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+               <input type="text" class="form-control" name="form[description]"/>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" name="form[price]"/>
+        </div>
+       <button type="submit" class="btn">Ok</button>
     </form>
-</table>
+</div>
 <table class="table">
+    <tr align="center"><td colspan="5"><h3>All products</h3></td></tr>
     <tr>
         <td>Name</td>
         <td>Description</td>
@@ -28,7 +31,7 @@
             echo '<td>' . $value['description'] . '</td>';
             echo '<td>' . $value['price'] . '</td>';
             echo '<td><a href=?delete_product=' . $value['id'] . '>Delete</a></td>';
-            echo '<td><a href=/admin/update_product/?update_product=' . $value['id'] . '>Update</a></td>';
+            echo '<td><a href=/admin/update-product/?update_product=' . $value['id'] . '>Update</a></td>';
             echo '<tr>';
       //  }
     }

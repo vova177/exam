@@ -13,7 +13,6 @@ if($action=="basket"){
         }
     }
     $post_count=isset($_POST['id'])? $_POST['id'] : null;
-    var_dump($post_count);
     if(isset($_GET['add'])){
         foreach ($_SESSION['cart'] as $key=> $product_id) {
             if($product_id == $_GET['add']){
@@ -23,13 +22,10 @@ if($action=="basket"){
             break;
         }
     }
-    var_dump($_SESSION['cart']);
-    var_dump($_SESSION['count']);
         if(empty($_SESSION['cart'])) {
             $product_by_id=[];
-        }else{
+        }else {
             $product_by_id = get_products($db, $_SESSION['cart']);
         }
-        echo json_encode(['count'=>$post_count]);
     view('basket', $product_by_id);
 }
